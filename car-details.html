@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoLux - Mercedes-Benz S-Class</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/car-details.css">
+</head>
+<body class="bg-dark">
+  <header class="header">
+    <div class="container-custom">
+      <div class="header-content">
+        <div class="logo">
+          <a href="home.html">AutoLux</a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="home.html#inventory">Veículos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-custom py-8">
+      <!-- Navegação de volta -->
+      <a href="home.html" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Voltar para veículos</span>
+      </a>
+      
+      <!-- Título do veículo -->
+      <h1 class="car-title">Mercedes-Benz S-Class</h1>
+      <p class="car-subtitle">Mercedes-Benz S 500 • 2023</p>
+      
+      <!-- Galeria de imagens -->
+      <div class="gallery">
+        <div class="gallery-container">
+          <img id="mainImage" src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80" alt="Mercedes-Benz S-Class" class="gallery-main-image">
+        </div>
+        
+        <!-- Controles de navegação -->
+        <div class="gallery-controls">
+          <button id="prevBtn" class="gallery-btn prev-btn" aria-label="Imagem anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="m15 18-6-6 6-6"/>
+            </svg>
+          </button>
+          <button id="nextBtn" class="gallery-btn next-btn" aria-label="Próxima imagem">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Indicador de imagens -->
+        <div class="gallery-indicators" id="galleryIndicators">
+          <button class="indicator active" data-index="0" aria-label="Ver imagem 1"></button>
+          <button class="indicator" data-index="1" aria-label="Ver imagem 2"></button>
+          <button class="indicator" data-index="2" aria-label="Ver imagem 3"></button>
+        </div>
+        
+        <!-- Botão para galeria completa -->
+        <button id="galleryBtn" class="gallery-full-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span class="text-sm">Ver todas</span>
+        </button>
+      </div>
+
+      <!-- Modal de galeria completa -->
+      <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+          <div class="gallery-modal-header">
+            <h2>Galeria de Mercedes-Benz S-Class</h2>
+            <p>Veja todas as imagens disponíveis deste veículo</p>
+            <button id="closeGallery" class="close-btn">&times;</button>
+          </div>
+          <div class="gallery-modal-grid" id="galleryGrid">
+            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80" alt="Mercedes-Benz S-Class - Vista 1" class="animate-fade-in">
+            <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80" alt="Mercedes-Benz S-Class - Vista 2" class="animate-fade-in">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80" alt="Mercedes-Benz S-Class - Vista 3" class="animate-fade-in">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Informações e preço -->
+      <div class="info-price-grid">
+        <div class="info-section">
+          <h2 class="section-heading">Descrição</h2>
+          <p class="description-text">
+            O Mercedes-Benz Classe S é a definição de luxo automotivo. Com seu interior espaçoso, tecnologia de ponta e acabamento impecável, oferece uma experiência de condução incomparável. Seu motor potente proporciona desempenho suave e eficiente, enquanto os sistemas de assistência ao motorista garantem segurança e conforto em qualquer trajeto.
+          </p>
+          
+          <!-- Características em grid -->
+          <h2 class="section-heading">Características</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Interior em couro Nappa</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Sistema de som Burmester 4D</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Painel digital com realidade aumentada</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Suspensão adaptativa AIR BODY CONTROL</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Iluminação ambiente com 64 cores</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Teto solar panorâmico</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-dot"></div>
+              <span>Assistente de estacionamento com câmeras 360°</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card de preço e contato -->
+        <div class="price-card">
+          <h3 class="price-title">Preço</h3>
+          <div class="price-value">R$ 750.000</div>
+          
+          <button class="btn btn-primary">Agendar test drive</button>
+          <button class="btn btn-outline">Solicitar proposta</button>
+          
+          <div class="contact-info">
+            <p class="contact-label">Entre em contato</p>
+            <p class="contact-phone">(11) 99999-9999</p>
+            <p class="contact-email">contato@autolux.com.br</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Especificações técnicas -->
+      <div class="specs-section">
+        <h2 class="section-heading">Especificações técnicas</h2>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <p class="spec-label">Motor</p>
+            <p class="spec-value">3.0L 6 cilindros em linha turbo</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Potência</p>
+            <p class="spec-value">429 cv</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Torque</p>
+            <p class="spec-value">520 Nm</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Transmissão</p>
+            <p class="spec-value">Automática de 9 velocidades</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Aceleração</p>
+            <p class="spec-value">4.9s (0-100 km/h)</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Velocidade máxima</p>
+            <p class="spec-value">250 km/h (limitada)</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Consumo</p>
+            <p class="spec-value">12.2 km/l (combinado)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-custom">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">AutoLux</h3>
+          <p class="footer-text">Experiência exclusiva para quem busca o melhor em carros de luxo.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="home.html#inventory">Veículos</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Contato</h3>
+          <address class="footer-contact">
+            <p>Av. Paulista, 1000 - São Paulo</p>
+            <p>contato@autolux.com.br</p>
+            <p>(11) 99999-9999</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AutoLux. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/car-details.js"></script>
+</body>
+</html>
